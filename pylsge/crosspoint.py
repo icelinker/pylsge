@@ -4,11 +4,6 @@ def crosspoint(v,vp,n,np):
         pass
     else:
         return (np.mat("0;0;0"),False)
-        #qiujiaodian
-    #print v,vp,n,np
-    #print vp-np
-    #print n.T*(vp-np)
-    #print v.T*n
     dt=-n.T*(vp-np)/(v.T*n)
     dp=vp+v*dt
     print dp
