@@ -25,30 +25,7 @@
 #% 
 #% [R, R1 <, R2, R3 >] = frrot3(theta <, U0 >) 
 #% -------------------------------------------------------------------------- 
-# 
-#  ct = cos(theta);  
-#  st = sin(theta); 
-#% 
-#  if length(theta) > 0 
-#    R1 = [ 1 0 0; 0 ct(1) -st(1); 0 st(1) ct(1)]; 
-#    R = R1; 
-#  end %if 
-#% 
-#  if length(theta) > 1 
-#    R2 = [ ct(2) 0 st(2); 0 1 0; -st(2) 0 ct(2)]; 
-#    R = R2*R; 
-#  end % if 
-#% 
-#  if length(theta) > 2 
-#    R3 = [ ct(3) -st(3) 0; st(3) ct(3) 0; 0 0 1]; 
-#    R = R3*R; 
-#   end % if 
-#% 
-#  if nargin > 1 
-#    R = R*U0; 
-#  end % if 
-#% -------------------------------------------------------------------------- 
-#% End of FRROT3.M.
+
 import numpy as np
 
 def frrot3(theta=None, U0=None): 
