@@ -28,22 +28,7 @@
 #% 
 #% [R <, DR1, DR2, DR3 >] = fgrrot3(theta <, R0 >) 
 #% -------------------------------------------------------------------------- 
-# 
-#  if nargin == 1 
-#    R0 = eye(3); 
-#  end % if 
-#% 
-#  [R, R1, R2, R3] = frrot3(theta, R0); 
-#% 
-#% Evaluate the derivative matrices if required. 
-#  if nargout > 1 
-#    [dR1, dR2, dR3] = drrot3(R1, R2, R3); 
-#    DR1 = R3*R2*dR1*R0; 
-#    DR2 = R3*dR2*R1*R0; 
-#    DR3 = dR3*R2*R1*R0; 
-#  end % if 
-#% -------------------------------------------------------------------------- 
-#% End of FGRROT3.M.
+
 import numpy as np
 from frrot3 import * 
 from drrot3 import * 
