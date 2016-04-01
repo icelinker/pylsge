@@ -26,25 +26,7 @@
 #%  
 #% [U, c, s] = gr(x, y) 
 #% -------------------------------------------------------------------------- 
-# 
-#% form sine and cosine: s and c 
-#  if y == 0 
-#    c = 1; 
-#    s = 0; 
-#  elseif  abs(y) >= abs(x) 
-#    t = x/y; 
-#    s = 1/sqrt(1 + t*t); 
-#    c = t*s; 
-#  else 
-#    t = y/x; 
-#    c = 1/sqrt(1 + t*t); 
-#    s = t*c; 
-#  end % if 
-#% 
-#% assign U 
-#  U = [c  s; -s  c]; 
-#% -------------------------------------------------------------------------- 
-#% End of GR.M.
+
 import numpy as np
 def gr(x=None,y=None):
     """    gr.py   Form Givens plane rotation.
