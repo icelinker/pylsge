@@ -53,34 +53,7 @@
 #% 
 #% [c, iconv, sp, sg] = gncc2(f0, f1, p, g, scale, tolr, scalef) 
 #% --------------------------------------------------------------------------  
-# 
-#  iconv = 0; 
-#% 
-#  sp = max(abs(p .* scale)); 
-#  sg = max(abs(g ./ scale)); 
-#% 
-#  c(1) = sp/(scalef * tolr^(0.7)); 
-#% 
-#  delf = f0 - f1; 
-#  c(2) = abs(delf)/(tolr * scalef); 
-#% 
-#  d3 = (tolr^(0.7)) * (scalef); 
-#  d4 = scalef * (eps^(0.7)); 
-#  d5 = (eps^(0.7)) * (scalef); 
-#% 
-#  c(3) = sg/d3; 
-#  c(4) = f1/d4; 
-#  c(5) = sg/d5; 
-#% 
-#  if c(1) < 1 &  c(2) < 1 & c(3) < 1 
-#    iconv = 1; 
-#  elseif (c(4)) < 1  
-#    iconv = 1; 
-#  elseif (c(5) < 1) 
-#    iconv = 1; 
-#  end 
-#% -------------------------------------------------------------------------- 
-#% End of GNCC2.M.
+
 import numpy as np
 def gncc2(f0=None, f1=None, p=None, g=None, scale=None, tolr=None, scalef=None):
     """
